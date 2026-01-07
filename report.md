@@ -185,14 +185,14 @@ Different applications use different rotation conventions (Euler angles, roll-pi
 
 ## Verification
 
-- Example images demonstrating the code are included in the `frames/` subfolder.
+- Example images demonstrating the code are included in the `matlab_assignment2/` subfolder.
 - The plotting and test scripts have been exercised to produce example PNGs demonstrating each function.
 - All functions were tested with GNU Octave 9.1.0 on Windows.
 - Test script confirms all functions pass with end-effector position: [-1.768, 1.768, 0.200] for the 4-link flexible robot.
 
 ## Example images
 
-Below are example images created for the assignment and included with this submission. Files are in the `frames/` subfolder.
+Below are example images created for the assignment and included with this submission. Files are in the `matlab_assignment2/` subfolder.
 
 ### Basic transformation matrices
 How the Solution Addresses Each Requirement
@@ -210,7 +210,7 @@ How the Solution Addresses Each Requirement
 
 These functions form the foundation for all subsequent operations. The output shows these matrices with numerical values for specific angle inputs.
 
-![Transformation matrices output](frames/trans_matrices.png)
+![Transformation matrices output](matlab_assignment2/trans_matrices.png)
 
 *The transformation matrix functions produce standard 4×4 homogeneous matrices used throughout robotics.*
 
@@ -227,7 +227,7 @@ These functions form the foundation for all subsequent operations. The output sh
 
 This visualization is essential for debugging and understanding how transformations affect coordinate frames. The image shows multiple frames at different positions and orientations.
 
-![3D coordinate frames](frames/plot_frame_3d.png)
+![3D coordinate frames](matlab_assignment2/plot_frame_3d.png)
 
 *Multiple coordinate frames demonstrate how transformations change position and orientation in 3D space.*
 
@@ -246,7 +246,7 @@ This visualization is essential for debugging and understanding how transformati
 
 The forward kinematics chain determines where each link ends up based on the joint angles provided.
 
-![3-link robot](frames/plot_robot_3d.png)
+![3-link robot](matlab_assignment2/plot_robot_3d.png)
 
 *The 3-link robot shows the complete kinematic chain from base to end-effector.*
 
@@ -263,7 +263,7 @@ The forward kinematics chain determines where each link ends up based on the joi
 
 This demonstrates how the robot moves through its workspace as joint angles change continuously.
 
-![Animation frame](frames/animate_frame_050.png)
+![Animation frame](matlab_assignment2/animate_frame_050.png)
 
 *Frame 50 of the animation sequence shows the robot in an intermediate configuration.*
 
@@ -280,7 +280,7 @@ This demonstrates how the robot moves through its workspace as joint angles chan
 
 Example usage creates a 4-link robot with mixed axes: Z, Y, Y, X. The end-effector position is computed and displayed, demonstrating the flexibility of the approach.
 
-![Flexible robot](frames/plot_robot_flexible.png)
+![Flexible robot](matlab_assignment2/plot_robot_flexible.png)
 
 *A 4-link robot with different rotation axes shows the generalization capability.*
 
@@ -297,7 +297,7 @@ Example usage creates a 4-link robot with mixed axes: Z, Y, Y, X. The end-effect
 
 This is important because rotation order matters in 3D (XYZ ≠ ZYX). Different engineering fields use different conventions, so supporting arbitrary sequences makes the code broadly applicable.
 
-![Arbitrary rotations](frames/arbitrary_rotation.png)
+![Arbitrary rotations](matlab_assignment2/arbitrary_rotation.png)
 
 *Different rotation sequences produce different final orientations, demonstrating that order matters.*
 ### Basic Requirements (9 points)
@@ -306,7 +306,7 @@ This is important because rotation order matters in 3D (XYZ ≠ ZYX). Different 
   - Implemented in: `RotX.m`, `RotY.m`, `RotZ.m`, `Trans3D.m`.
   - Demonstration: shown in transformation matrices output image.
   
-  ![Figure: Transformation matrices](frames/trans_matrices.png){width=60%}
+  ![Figure: Transformation matrices](matlab_assignment2/trans_matrices.png){width=60%}
   
   *Figure: Transformation matrices output demonstrating RotX, RotY, RotZ, and Trans3D functions.*
 
@@ -325,7 +325,7 @@ All functions were thoroughly tested using the comprehensive test script `test_a
 
 The test output confirms all functions work correctly:
 
-![Test execution results](frames/test_output.png)
+![Test execution results](matlab_assignment2/test_output.png)
 
 *Complete test execution showing all components functioning correctly.*
 

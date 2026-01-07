@@ -97,7 +97,7 @@ octave-cli --no-gui --eval "cd('D:/Masters/Robotics/assignment2'); test_assignme
 
 ## Verification:
 
-• Example images demonstrating the code are included in the `frames/` subfolder.  
+• Example images demonstrating the code are included in the `matlab_assignment2/` subfolder.  
 • Run `test_assignment2` to verify all functions pass the test suite.  
 • Check `report.md` for detailed documentation with embedded images.  
 
