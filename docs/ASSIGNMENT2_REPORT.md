@@ -17,7 +17,7 @@ octave-cli --no-gui --eval "cd('D:/Masters/Robotics/assignment2'); disp(['Octave
 - All basic tests (a,b,c) ran; plotting warnings about `fltk` were shown (recommend `qt`).
 - Advanced tests completed.
 - End-effector position reported by `plot_robot_flexible`: [-1.768, 1.768, 0.200].
-- Final status: All tests completed successfully. Total points: 15/15.
+- Final status: All tests completed successfully.
 
 ## Issues encountered & fixes
 1. `plot_robot_flexible.m` contained a variable named `axis` which shadowed the Octave `axis` function and caused a parse/runtime error. Fix applied:
