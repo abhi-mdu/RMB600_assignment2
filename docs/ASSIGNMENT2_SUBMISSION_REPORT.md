@@ -50,7 +50,7 @@ T = RotX(pi/4);  % Rotate 45° about X-axis
 ```
 
 **Screenshot:**
-![RotX Test Output](matlab_assignment2/rotx_test.png)
+![RotX Test Output](../matlab_assignment2/rotx_test.png)
 *Figure 1.1: RotX transformation matrix output*
 
 ---
@@ -77,7 +77,7 @@ end
 ```
 
 **Screenshot:**
-![RotY Test Output](matlab_assignment2/roty_test.png)
+![RotY Test Output](../matlab_assignment2/roty_test.png)
 *Figure 1.2: RotY transformation matrix output*
 
 ---
@@ -104,7 +104,7 @@ end
 ```
 
 **Screenshot:**
-![RotZ Test Output](matlab_assignment2/rotz_test.png)
+![RotZ Test Output](../matlab_assignment2/rotz_test.png)
 *Figure 1.3: RotZ transformation matrix output*
 
 ---
@@ -134,7 +134,7 @@ T = Trans3D(1, 2, 3);  % Translate by (1,2,3)
 ```
 
 **Screenshot:**
-![Trans3D Test Output](matlab_assignment2/trans3d_test.png)
+![Trans3D Test Output](../matlab_assignment2/trans3d_test.png)
 *Figure 1.4: Trans3D transformation matrix output*
 
 ---
@@ -181,7 +181,7 @@ plot_frame_3d(T, 1, 'Frame A');
 ```
 
 **Screenshot:**
-![3D Frame Plotting](matlab_assignment2/plot_frame_3d.png)
+![3D Frame Plotting](../matlab_assignment2/plot_frame_3d.png)
 *Figure 2: 3D coordinate frames with colored axes*
 
 ---
@@ -225,7 +225,7 @@ plot_robot_3d(0, pi/4, pi/6);  % Test configuration
 ```
 
 **Screenshot:**
-![3D Robot Visualization](matlab_assignment2/plot_robot_3d.png)
+![3D Robot Visualization](../matlab_assignment2/plot_robot_3d.png)
 *Figure 3: 3-link robot with joint angles [0, π/4, π/6]*
 
 ---
@@ -277,7 +277,7 @@ animate_robot_3d(1, 1, 1, 100);
 ```
 
 **Screenshot:**
-![Robot Animation](matlab_assignment2/animate_robot_3d.png)
+![Robot Animation](../matlab_assignment2/animate_robot_3d.png)
 *Figure 4: Robot animation at different time steps*
 
 ---
@@ -321,7 +321,7 @@ plot_robot_flexible(link_params, joint_angles);
 ```
 
 **Screenshot:**
-![Flexible Robot](matlab_assignment2/plot_robot_flexible.png)
+![Flexible Robot](../matlab_assignment2/plot_robot_flexible.png)
 *Figure 5: 4-link robot with mixed rotation axes*
 
 ---
@@ -391,7 +391,7 @@ T = arbitrary_rotation('XYX', [pi/4, pi/3, pi/4]);
 | YZY | [30, 45, 60] | ✓ Pass |
 
 **Screenshot:**
-![Arbitrary Rotation](matlab_assignment2/arbitrary_rotation.png)
+![Arbitrary Rotation](../matlab_assignment2/arbitrary_rotation.png)
 *Figure 6: Arbitrary rotation sequence outputs*
 
 ---
@@ -429,7 +429,7 @@ octave-cli --no-gui --eval "cd('D:/Masters/Robotics/assignment2'); test_assignme
 **Total Score: 15/15 points**
 
 ### Test Output Screenshot
-![Test Execution](matlab_assignment2/test_output.png)
+![Test Execution](../matlab_assignment2/test_output.png)
 *Figure 7: Complete test script execution results*
 
 ---

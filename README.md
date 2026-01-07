@@ -1,116 +1,129 @@
-# Assignment 2 — 3D Forward Kinematics (RMB600)
+# RMB600 Assignment 2 - 3D Forward Kinematics
 
-This folder contains MATLAB/Octave code for Assignment 2 (3D forward kinematics).
+MATLAB/Octave implementation of 3D robot forward kinematics with visualization and animation capabilities.
 
-## Files:
+## 📁 Directory Structure
 
-### Basic Requirements (9 points)
+```
+├── src/                          # MATLAB source code
+│   ├── RotX.m                    # Rotation about X-axis
+│   ├── RotY.m                    # Rotation about Y-axis
+│   ├── RotZ.m                    # Rotation about Z-axis
+│   ├── Trans3D.m                 # 3D translation
+│   ├── plot_frame_3d.m           # Plot coordinate frames
+│   ├── plot_robot_3d.m           # Plot 3-link robot
+│   ├── plot_robot_flexible.m     # Plot flexible robot configuration
+│   ├── animate_robot_3d.m        # Animate robot motion
+│   ├── arbitrary_rotation.m      # Arbitrary rotation sequences
+│   ├── test_assignment2.m        # Test suite
+│   ├── example_usage.m           # Usage examples
+│   └── generate_report_figures.m # Generate all report figures
+│
+├── docs/                         # Documentation
+│   ├── README.md                 # Detailed project documentation
+│   ├── ASSIGNMENT2_SUBMISSION_REPORT.md  # Submission report
+│   ├── QUICK_START.md            # Quick start guide
+│   ├── report.md                 # Detailed technical report
+│   └── *.pdf, *.html             # Generated reports
+│
+├── matlab_assignment2/           # Generated figures (from MATLAB Online)
+└── frames/                       # Example output frames
 
-• `RotX.m` — returns a 4×4 homogeneous rotation matrix about the X-axis.  
-• `RotY.m` — returns a 4×4 homogeneous rotation matrix about the Y-axis.  
-• `RotZ.m` — returns a 4×4 homogeneous rotation matrix about the Z-axis.  
-• `Trans3D.m` — returns a 4×4 homogeneous translation matrix for 3D translation (x,y,z).  
-• `plot_frame_3d.m` — plots a 3D coordinate frame given a 4×4 transform (X-axis in red, Y-axis in green, Z-axis in blue).  
-• `plot_robot_3d.m` — plots a 3-link 3D robot given joint angles and link lengths.  
+```
 
-### Advanced Requirements (6 points)
+## 🚀 Quick Start
 
-• `animate_robot_3d.m` — animates a 3D robot with all joints rotating about the Z-axis.  
-• `plot_robot_flexible.m` — plots a robot with any number of links on any rotation axis (X, Y, or Z).  
-• `arbitrary_rotation.m` — computes transformation matrices for arbitrary rotation sequences (e.g., XYZ, ZYX, XYX).  
+### Running Locally (MATLAB/Octave)
 
-### Supporting Files
+```matlab
+cd src
+test_assignment2        % Run all tests
+example_usage          % See usage examples
+```
 
-• `test_assignment2.m` — comprehensive test script for all functions.  
-• `example_usage.m` — usage examples demonstrating all functions.  
-• `report.md` — detailed assignment report with implementation details and images.  
+### Running on MATLAB Online
 
-## Usage:
-
-1. Open MATLAB or Octave and change directory to this folder:
+1. Clone the repository:
    ```matlab
-   cd('D:/Masters/Robotics/assignment2')
+   !git clone https://github.com/abhi-mdu/RMB600_assignment2.git
+   cd RMB600_assignment2/src
    ```
 
-2. Run the test script to verify all functions:
+2. Generate figures:
+   ```matlab
+   generate_report_figures
+   ```
+
+3. Run tests:
    ```matlab
    test_assignment2
    ```
 
-3. Run basic examples:
-   ```matlab
-   % Test rotation matrices
-   RotX(pi/4)
-   RotY(pi/3)
-   RotZ(pi/6)
-   Trans3D(1, 2, 3)
-   
-   % Plot a 3D frame
-   figure;
-   plot_frame_3d(eye(4), 1, 'Base Frame');
-   
-   % Plot a 3-link robot
-   figure;
-   plot_robot_3d(0, pi/4, pi/6);
-   ```
+## 📊 Features
 
-4. Run advanced examples:
-   ```matlab
-   % Animate robot
-   animate_robot_3d(1, 1, 1, 100);
-   
-   % Flexible robot with 4 links
-   link_params = {'Z', 1.0; 'Y', 1.5; 'Y', 1.0; 'X', 0.8};
-   joint_angles = [pi/4, pi/6, pi/3, pi/4];
-   figure;
-   plot_robot_flexible(link_params, joint_angles);
-   
-   % Arbitrary rotation sequences
-   T = arbitrary_rotation('XYZ', [pi/4, pi/6, pi/3]);
-   ```
+### Basic Requirements (9 points)
+- ✅ Transformation matrices (RotX, RotY, RotZ, Trans3D)
+- ✅ 3D coordinate frame visualization
+- ✅ 3-link robot plotting
 
-5. For more examples, see:
-   ```matlab
-   example_usage
-   ```
+### Advanced Requirements (6 points)
+- ✅ Robot animation with rotating joints
+- ✅ Flexible robot configuration (any number of links, any rotation axes)
+- ✅ Arbitrary rotation sequences (XYZ, ZYX, XYX, etc.)
 
-## Notes & assumptions:
+## 📖 Documentation
 
-• All rotation angles are in radians.  
-• The robot uses homogeneous transformation matrices (4×4) for 3D transformations.  
-• Forward kinematics is computed by sequentially multiplying rotation and translation matrices.  
-• Code is written to be compatible with both MATLAB and Octave.  
-• In `plot_robot_flexible.m`, variable `axis` was renamed to `ax` to avoid shadowing the built-in MATLAB/Octave function.  
+- [Quick Start Guide](docs/QUICK_START.md)
+- [Submission Report](docs/ASSIGNMENT2_SUBMISSION_REPORT.md)
+- [Technical Report](docs/report.md)
+- [Deliverables Checklist](docs/DELIVERABLES.md)
 
-## Running in Octave:
+## 🎓 Course Information
 
-If using GNU Octave:
-```bash
-cd assignment2
-octave --gui
+- **Course:** RMB600 - Robot Modelling
+- **Assignment:** Assignment Two: 3D Forward Kinematics
+- **Institution:** Högskolan Väst, Trollhättan, Sweden
+
+## 📝 Usage Examples
+
+```matlab
+% Basic transformations
+T = RotZ(pi/4) * Trans3D(1, 0, 0);
+
+% Plot a frame
+plot_frame_3d(T, 1.0);
+
+% Plot a 3-link robot
+joint_angles = [pi/4, pi/3, pi/6];
+link_lengths = [1, 1.5, 1];
+plot_robot_3d(joint_angles, link_lengths);
+
+% Flexible robot with mixed axes
+joint_angles = [pi/6, pi/4, -pi/6, pi/3];
+link_lengths = [1, 1.2, 0.8, 1];
+rotation_axes = ['Z', 'Y', 'Z', 'X'];
+plot_robot_flexible(joint_angles, link_lengths, rotation_axes);
 ```
 
-Or command-line mode:
-```bash
-octave-cli --no-gui --eval "cd('D:/Masters/Robotics/assignment2'); test_assignment2; exit;"
+## 📦 Requirements
+
+- MATLAB R2019b or later / GNU Octave 6.0+
+- No additional toolboxes required
+
+## ✅ Test Results
+
+All tests pass successfully: **15/15 points**
+
+```
+✓ Basic Requirements (9/9 points)
+✓ Advanced Requirements (6/6 points)
 ```
 
-## Verification:
+## 📄 License
 
-• Example images demonstrating the code are included in the `matlab_assignment2/` subfolder.  
-• Run `test_assignment2` to verify all functions pass the test suite.  
-• Check `report.md` for detailed documentation with embedded images.  
+Educational project for RMB600 course.
 
-## Points Summary:
+## 👤 Author
 
-- **Basic Requirements:** 9/9 points
-  - Transformation functions (RotX, RotY, RotZ, Trans3D): 2 points
-  - 3D frame plotting: 2 points
-  - 3D robot visualization: 2 points
-
-- **Advanced Requirements:** 6/6 points
-  - Robot animation: 3 points
-  - Flexible robot function: 3 points
-  - Arbitrary rotation sequences: 3 points
-
-**Total: 15/15 points**
+Abhishek Kumar  
+Masters in AI, Högskolan Väst
