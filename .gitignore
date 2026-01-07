@@ -1,0 +1,22 @@
+# MATLAB/Octave
+*.asv
+*.m~
+octave-workspace
+.octave_hist
+
+# Output files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+*_OLD.md
+*_old.*
+*.bak
+
+# Temporary files
+*.tmp
+~$*

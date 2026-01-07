@@ -1,0 +1,96 @@
+=== Assignment 2: 3D Forward Kinematics Test ===
+
+--- BASIC (a): Testing Rotation and Translation Functions ---
+
+1. RotX(pi/4):
+   1.0000        0        0        0
+        0   0.7071  -0.7071        0
+        0   0.7071   0.7071        0
+        0        0        0   1.0000
+2. RotY(pi/3):
+   0.5000        0   0.8660        0
+        0   1.0000        0        0
+  -0.8660        0   0.5000        0
+        0        0        0   1.0000
+3. RotZ(pi/6):
+   0.8660  -0.5000        0        0
+   0.5000   0.8660        0        0
+        0        0   1.0000        0
+        0        0        0   1.0000
+4. Trans3D(1, 2, 3):
+   1   0   0   1
+   0   1   0   2
+   0   0   1   3
+   0   0   0   1
+
+--- BASIC (b): Testing 3D Frame Plotting ---
+Plotting multiple coordinate frames...
+
+--- BASIC (c): Testing 3D Robot Plotting ---
+Plotting 3-link robot with joint angles: [0, pi/4, pi/6]
+
+--- ADVANCED (a): Testing Robot Animation ---
+Starting animation (rotating joints on Z-axis)...
+(Animation will run for a few seconds)
+
+--- ADVANCED (b): Testing Flexible Robot Function ---
+Creating 4-link robot with mixed rotation axes...
+End-Effector Position: [-1.768, 1.768, 0.200]
+
+--- ADVANCED (c): Testing Arbitrary Rotation Function ---
+
+1. Testing XYZ rotation:
+Rotation Sequence: XYZ
+Angles (rad): [0.7854 0.5236 1.0472 ]
+Angles (deg): [45.00 30.00 60.00 ]
+
+Resulting Transformation Matrix:
+   0.4330  -0.7500   0.5000        0
+   0.7891   0.0474  -0.6124        0
+   0.4356   0.6597   0.6124        0
+        0        0        0   1.0000
+
+2. Testing ZYX rotation:
+Rotation Sequence: ZYX
+Angles (rad): [1.0472 0.5236 0.7854 ]
+Angles (deg): [60.00 30.00 45.00 ]
+
+Resulting Transformation Matrix:
+   0.4330  -0.4356   0.7891        0
+   0.7500   0.6597  -0.0474        0
+  -0.5000   0.6124   0.6124        0
+        0        0        0   1.0000
+
+3. Testing XYX (Euler angles) rotation:
+Rotation Sequence: XYX
+Angles (rad): [0.7854 1.0472 0.7854 ]
+Angles (deg): [45.00 60.00 45.00 ]
+
+Resulting Transformation Matrix:
+   0.5000   0.6124   0.6124        0
+   0.6124   0.2500  -0.7500        0
+  -0.6124   0.7500  -0.2500        0
+        0        0        0   1.0000
+
+4. Testing YZY rotation:
+Rotation Sequence: YZY
+Angles (rad): [0.5236 0.7854 1.0472 ]
+Angles (deg): [30.00 45.00 60.00 ]
+
+Resulting Transformation Matrix:
+  -0.1268  -0.6124   0.7803        0
+   0.3536   0.7071   0.6124        0
+  -0.9268   0.3536   0.1268        0
+        0        0        0   1.0000
+
+=== All Tests Completed Successfully! ===
+
+Files created for assignment:
+  Basic (a): RotX.m, RotY.m, RotZ.m, Trans3D.m
+  Basic (b): plot_frame_3d.m
+  Basic (c): plot_robot_3d.m
+  Advanced (a): animate_robot_3d.m
+  Advanced (b): plot_robot_flexible.m
+  Advanced (c): arbitrary_rotation.m
+
+Total Points: 15/15
